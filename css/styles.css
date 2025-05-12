@@ -1,0 +1,117 @@
+
+/* Elements */
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24pt;
+    font-weight: 900;
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+    font-weight: 800;
+}
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    font-weight: 700;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+figure {
+    width: 240px;
+    max-width: 50%;
+}
+figcaption {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-variant: small-caps;
+}
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+nav { 
+    border: 1px black solid;
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    padding: 5px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Classes */
+aside.quote {
+    font-family: "Times New Roman", serif; 
+    font-size: 12pt;
+    font-style: italic;
+}
+.right {
+    float: right;
+    
+} 
+.clearRightFloat {
+    clear: right;
+}
+
+/* IDs */
+h2#mainHeading {
+    color: cornflowerblue;
+    font-family: cursive, serif;
+}
+
+img#mainImage {
+    border-radius: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+img#profile {
+    border-radius: 50%
+}
+img.thumbnail {
+    border-radius: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+img.left {
+    float: left;
+}
+
+p.jobTitle
+{
+    margin-left: 70px;
+}
+
+ul.jobDetails {
+    margin-left: 40px;
+}
+
+div#mainImageContainer {
+    width: 350px;
+    max-width: 50%;
+}
+
+/* flex layout */
+div#container {
+    display: flex;
+}
+div#column1 { 
+    width: 60%; 
+    /* border: solid thick violet;*/
+}
+div#column2 { 
+    width: 40%; 
+    /* border: solid thick violet;*/
+}
