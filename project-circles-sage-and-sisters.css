@@ -1,0 +1,36 @@
+/* Begin banner styles */
+.project-circles-sage-and-sisters-impactfultext-container {
+  gap: 10px;
+  height: 250px;
+  display: flex;
+  z-index: 1;
+  overflow: auto;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding-top: 80px;
+  padding-left: 128px 24px;
+  padding-right: 128px 24px;
+  padding-bottom: 80px;
+  background-size: cover;
+  background-image: url("public/external/bannerCirclesSageAndSisters.png");
+}
+
+.project-circles-sage-and-sisters-impactful-text {
+    color: rgba(255, 255, 255, 1); /*change text color to black or white depending on color of background image*/
+    height: auto;
+    font-size: 76px;
+    font-style: Bold;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+/* End banner styles */
+
+
+ 
+

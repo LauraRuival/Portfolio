@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Me</title>
+    <meta
+      name="title"
+      content="Contact Me - Portfolio"
+    />
+    <meta
+      name="description"
+      content="Get in touch with me. Send me a message and we'll respond promptly to your inquiry."
+    />
+    <meta property="og:title" content="Contact Me" />
+    <meta
+      property="og:description"
+      content="Get in touch with me. Send me a message and we'll respond promptly to your inquiry."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:title" content="Contact Me" />
+    <meta
+      name="twitter:description"
+      content="Get in touch with me. Send me a message and we'll respond promptly to your inquiry."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <style>
+      a:has(> [class*="-thq-product-card-elm"]) { display: contents; }
+      [class*="-thq-product-item-wrapper-elm"] > a { display: contents; }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./contact-me.css" />
+    
+    <style>
+      textarea {
+        /* Dimensions & Resizing */
+        width: 100%;
+        height: 150px;
+        min-height: 80px;
+        resize: vertical; /* Allows resizing up & down, but prevents breaking layout width */
+        box-sizing: border-box; /* Ensures padding & borders don't exceed the width */
+
+        /* Typography (Browsers don't inherit font-family by default) */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333333;
+
+        /* Box Styling */
+        background-color: #fcfcfc;
+        padding: 12px 16px;
+        border: 1px solid #cccccc;
+        border-radius: 6px;
+
+        /* Smooth Transitions for Interaction states */
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      }
+      /* 2. Style Interaction States */
+
+      /* Hover state */
+      textarea:hover {
+        border-color: #a0a0a0;
+        background-color: #ffffff;
+      }
+
+      /* Focus state (When the user clicks into it) */
+      textarea:focus {
+        outline: none; /* Removes the ugly default browser outline */
+        border-color: #0066cc; /* Clean modern accent color */
+        box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15); /* Soft outer glow */
+        background-color: #ffffff;
+      }
+
+      /* 3. Optional: Style the Placeholder text */
+      textarea::placeholder {
+        color: #888888;
+        font-style: italic;
+      }
+      
+      input {
+        box-sizing: border-box;
+      }
+
+      /* Target specific text-based input fields */
+      input[type="text"], 
+      input[type="email"], 
+      input[type="password"] {
+        width: 100%;             /* Make it responsive */
+        max-width: 400px;        /* Restrict maximum width */
+        padding: 12px 16px;      /* Generous touch targets for mobile */
+        font-size: 16px;         /* Prevents iOS from auto-zooming on focus */
+
+        /* Borders and Edges */
+        border: 2px solid #ccc;
+        border-radius: 6px;      /* Smooth rounded corners */
+        background-color: #fff;
+        color: #333;
+
+        /* Smooth animation transition when clicking into the field */
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+      
+      .submit-buttonprimary {
+        background-color: black;    /* Sets background to black */
+        color: white;               /* Sets text color to white */
+        border-radius: 8px;         /* Rounds the corners */
+        border: none;               /* Removes the default browser border */
+        padding: 10px 20px;         /* Adds vertical and horizontal spacing */
+        font-size: 16px;            /* Enhances text readability */
+        cursor: pointer;            /* Changes cursor to a hand on hover */
+      }
+    </style>
+     <script>
+    // Paste your Google Web App URL here
+    const WEB_APP_URL = 'YOUR_WEB_APP_URL_HERE';
+
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const statusText = document.getElementById('status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Stop page reload
+
+      // Update UI state
+      submitBtn.disabled = true;
+      statusText.style.color = 'black';
+      statusText.textContent = 'Sending message...';
+
+      // Gather form inputs
+      const formData = {
+        name: document.getElementById('firstName').value + document.getElementById(' lastNmae'),
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+      };
+
+      try {
+        // Send data to Google Apps Script
+        const response = await fetch(https://script.google.com/macros/s/AKfycby5iikIXdu5V549t7VB7cv4Gvz3PlQ059Lr0ObvW2QrTByPaYkxuOYtF5vP7ilKC9FR/exec, {
+          method: 'POST',
+          mode: 'no-cors', // Necessary for dealing with Google cross-domain requests
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        // Note: Because of 'no-cors', response.ok will not return true.
+        // We assume it sent successfully if no catch block error triggers.
+        statusText.style.color = 'green';
+        statusText.textContent = 'Thank you! Your message has been sent.';
+        form.reset();
+
+      } catch (error) {
+        console.error('Error:', error);
+        statusText.style.color = 'red';
+        statusText.textContent = 'An error occurred. Please try again later.';
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+  </head>
+  <body>
+    
+    <!--Begin main content area-->
+    <div class="main-wrapper">
+      
+      <!-- Begin top navigtaion-->
+      <div class="navigation-container">
+        <div class="navigation-content">
+          <a href="index.html"><img
+            src="public/external/LR-Logo-v6.png"
+            alt="LR logo"
+            class="navigation-logo-image"
+            /></a>
+          <span class="navigation-title-text">Laura Ruival</span>
+          <div class="navigation-extracontent-container">
+            <div class="navigation-links-container">
+              <span class="navigation-link-text"><a href="index.html#projects">Projects</a></span>
+            </div>
+            <span class="buttonprimary">
+              <span class="buttonprimary-text"><a href="contact-me.html">Let’s work together</a></span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- End top navigtaion-->
+          
+      <!-- Begin page content -->
+      
+      <!-- Begin banner section -->
+      <div class="contact-me-impactfultext-container">
+        <span class="contact-me-impactfultext">Contact Me</span>
+      </div>
+      <!-- End banner section -->
+      
+      <!-- Begin main page content -->
+      <div class="contact-me-sectionheading-container">
+        <span class="contact-me-sectionheading-text">Let’s Work Together!</span>
+      </div>
+      
+      <div class="contact-me-contact-form-container">
+        <div class="contact-me-page-container">
+          <div class="contact-me-page-description-container">
+            <span class="contact-me-page-description-text">
+              Send me a message with your project details and timeline and we
+              can work together to come up with a solution.
+            </span>
+          </div>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group hidden-field">
+              <label for="honeypot">Leave this field blank</label>
+              <input type="text" id="honeypot" autocomplete="off" tabindex="-1">
+            </div>
+            <button type="submit" id="submitBtn" class="submit-buttonprimary">Send Message</button>
+          </form>
+          
+          <p id="status"></p>
+          <!--
+          <div class="contact-me-contact-form-row-container">
+            <span class="contact-me-body-text BodyBase">
+              First Name
+            </span>
+            <input id="firstName"
+              type="text"
+              placeholder="Value"
+              class="contact-me-input-text"
+            />
+          </div>
+          <div class="contact-me-contact-form-row-container">
+            <span class="contact-me-body-text BodyBase">
+              Last Name
+            </span>
+            <input id="lastName"
+              type="text"
+              placeholder="Value"
+              class="contact-me-input-text"
+            />
+          </div>
+          <div class="contact-me-contact-form-row-container">
+            <span class="contact-me-body-text BodyBase">Email</span>
+            <input id="email"
+              type="text"
+              placeholder="Value"
+              class="contact-me-input-text"
+            />
+          </div>
+          <div class="contact-me-contact-form-row-container">
+            <span class="contact-me-thq-text-elm19 BodyBase">Message</span>
+            <div class="contact-me-thq-textarea-elm">
+              <span class="contact-me-text-area BodyBase">Value</span>
+              <img
+                src="public/external/dragi141-arqo.svg"
+                alt="DragI141"
+                class="contact-me-thq-drag-elm"
+              />
+            </div>
+          </div>-->
+          <!--<button class="contact-me-thq-submit-button-group-elm"></button>-->
+          <!--<button class="contact-me-thq-submit-button-elm" onclick="submitContactForm();">-->
+          <!--
+          <button type="submit" id="submitBtn" class="buttonprimary">
+            <span class="buttonprimary-text">
+              Submit
+            </span>
+          </button>
+          -->
+          <!--<button type="submit" id="submitBtn">Send Message</button>-->
+        </div>
+      </div>
+      <!-- Begin main page content -->
+      
+      <!-- Begin footer section -->
+      <div class="footer-container">
+        <div class="footer-content">
+          <span class="footer-text">Laura Ruival</span>
+          <div class="sociallinks-container1">
+              <div class="sociallinks-container2">
+                <a
+              href="https://www.linkedin.com/in/laura-ruival-0a43b52/"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="home-link"
+            ><img
+                  alt="LinkedIn logo"
+                  src="public/external/LI-In-Bug.png"
+                  class="sociallink-image"
+                />
+                  </a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer section -->
+      
+      <!-- Begin Back to top button -->
+      <div class="buttonsecondary">
+          <div class="buttonsecondary-container">
+            <span class="buttonsecondary-text">
+              <a href="#top">Back to top ↑</a>
+            </span>
+          </div>
+      </div>
+      <!-- End Back to top button -->
+      
+    </div>
+    <!--End main content area--> 
+    <script>
+      // This script handles sending an email notification when someone submits the form
+      // Paste your Google Web App URL here
+      const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwR-gsamnrjQyVSO675G7p0Q56FsarPmiwncPixDh4HPz1R4_so6EYWWt4RFrKcO2HC/exec';
+
+      const form = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const statusText = document.getElementById('status');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Stop page reload
+
+        // 1. Check the honeypot field
+        const honeypotValue = document.getElementById('honeypot').value;
+        if (honeypotValue.trim() !== "") {
+          console.log("Bot detected!");
+          // Trick the bot into thinking it succeeded without sending anything
+          statusText.style.color = 'green';
+          statusText.textContent = 'Thank you! Your message has been sent.';
+          form.reset();
+          return; // Stop the function here
+        }
+
+        // 2. Your normal code continues below if it's a human...
+        // 
+        // Update UI state
+        submitBtn.disabled = true;
+        statusText.style.color = 'black';
+        statusText.textContent = 'Sending message...';
+
+        // Gather form inputs
+        const formData = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          message: document.getElementById('message').value
+        };
+
+        try {
+          // Send data to Google Apps Script
+          const response = await fetch(WEB_APP_URL, {
+            method: 'POST',
+            mode: 'no-cors', // Necessary for dealing with Google cross-domain requests
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          });
+
+          // Note: Because of 'no-cors', response.ok will not return true.
+          // We assume it sent successfully if no catch block error triggers.
+          statusText.style.color = 'green';
+          statusText.textContent = 'Thank you! Your message has been sent.';
+          form.reset();
+
+        } catch (error) {
+          console.error('Error:', error);
+          statusText.style.color = 'red';
+          statusText.textContent = 'An error occurred. Please try again later.';
+        } finally {
+          submitBtn.disabled = false;
+        }
+      });
+    </script>
+    
+    <script>
+      (function () {
+        var PROBE_ATTR = 'data-teleport-slider-probe';
+        var PROBE_MAX_LIFETIME_MS = 30000;
+        var SwiperCtor = null;
+        var capturedModules = null;
+        var probeEl = null;
+        var trackedInstances = [];
+        function safeJsonParse(raw) {
+          if (!raw) return null;
+          var decoder = document.createElement('textarea');
+          decoder.innerHTML = raw;
+          try { return JSON.parse(decoder.value); } catch (e) { return null; }
+        }
+        function toPositiveInt(v, fallback) {
+          var n = parseInt(v, 10);
+          return (!isNaN(n) && n > 0) ? n : fallback;
+        }
+        function toSpacing(v, fallback) {
+          // Zero is a legitimate gap, so it must not fall through to the default
+          // the way toPositiveInt makes it.
+          var n = parseInt(v, 10);
+          return (!isNaN(n) && n >= 0) ? n : fallback;
+        }
+        function buildBreakpoints(el) {
+          var raw = safeJsonParse(el.getAttribute('data-breakpoints')) || {};
+          var mobile = raw.mobile || {};
+          var tablet = raw.tablet || {};
+          var desktop = raw.desktop || {};
+          // With no breakpoint map, derive the per-width slide count from the
+          // slider's OWN base config instead of assuming a multi-card carousel.
+          // Hardcoding 3-on-desktop here overrode every single-slide slider that
+          // omits the map — the generator tells the model to omit it for hero
+          // carousels, and the gallery lightbox omitted it too — which fits every
+          // slide onto one page and leaves the arrows and bullets with nowhere to
+          // go. Same derivation the editor uses in flows/slider.ts.
+          var baseSlidesPerView = toPositiveInt(el.getAttribute('data-slides-per-view'), 1);
+          var bps = {};
+          bps[0] = {
+            slidesPerView: toPositiveInt(mobile.slidesPerView, 1),
+            spaceBetween: toSpacing(mobile.spaceBetween, 12),
+          };
+          bps[768] = {
+            slidesPerView: toPositiveInt(tablet.slidesPerView, Math.min(baseSlidesPerView, 2)),
+            spaceBetween: toSpacing(tablet.spaceBetween, 16),
+          };
+          bps[1024] = {
+            slidesPerView: toPositiveInt(desktop.slidesPerView, baseSlidesPerView),
+            spaceBetween: toSpacing(desktop.spaceBetween, 24),
+          };
+          return bps;
+        }
+        function buildConfig(el) {
+          var cfg = {
+            slidesPerView: toPositiveInt(el.getAttribute('data-slides-per-view'), 1),
+            spaceBetween: toPositiveInt(el.getAttribute('data-space-between'), 0),
+            breakpoints: buildBreakpoints(el),
+          };
+          // Carry over the module classes that the CDN bundle loaded
+          // initially (Navigation / Pagination / Autoplay). Without these
+          // the re-instantiated Swiper only has Resize + Observer — the
+          // navigation arrows and pagination bullets become dead.
+          if (capturedModules && capturedModules.length > 0) {
+            cfg.modules = capturedModules.slice();
+          }
+          if (el.getAttribute('data-pagination') === 'true') {
+            var paginationEl = el.querySelector('.swiper-pagination');
+            if (paginationEl) cfg.pagination = { el: paginationEl, clickable: true, type: 'bullets' };
+          }
+          if (el.getAttribute('data-navigation') === 'true') {
+            var nextEl = el.querySelector('.swiper-button-next');
+            var prevEl = el.querySelector('.swiper-button-prev');
+            if (nextEl && prevEl) cfg.navigation = { nextEl: nextEl, prevEl: prevEl };
+          }
+          return cfg;
+        }
+        function captureFromInstance(instance) {
+          if (!instance) return;
+          if (!SwiperCtor && instance.constructor && instance.constructor.name === 'Swiper') {
+            SwiperCtor = instance.constructor;
+          }
+          if (!capturedModules && instance.params && Array.isArray(instance.params.modules)) {
+            // Clone so Swiper's own mutation of params.modules during teardown
+            // does not surprise us on a subsequent re-instantiation.
+            capturedModules = instance.params.modules.slice();
+          }
+        }
+        function createCtorProbe() {
+          // This script is inline in <body>, so it runs while the document is
+          // still parsing — before the deferred CDN bundle executes. The probe
+          // is therefore guaranteed to be present for the bundle's one and only
+          // init pass. It is appended at the end of <body>, after the Next.js
+          // root, so it is also the LAST element that pass reaches: even if the
+          // bundle ever choked on it, every real slider would already be built.
+          var host = document.body || document.documentElement;
+          if (!host) return;
+          try {
+            var el = document.createElement('div');
+            el.setAttribute('data-thq', 'slider');
+            el.setAttribute(PROBE_ATTR, 'true');
+            el.setAttribute('aria-hidden', 'true');
+            el.className = 'swiper';
+            el.style.cssText =
+              'position:absolute;left:-9999px;top:0;width:0;height:0;overflow:hidden;visibility:hidden;pointer-events:none';
+            el.innerHTML =
+              '<div data-thq="slider-wrapper" class="swiper-wrapper">' +
+              '<div data-thq="slider-slide" class="swiper-slide"></div></div>';
+            host.appendChild(el);
+            probeEl = el;
+            // Never leave the probe behind if the CDN bundle fails to load at all.
+            setTimeout(disposeProbe, PROBE_MAX_LIFETIME_MS);
+          } catch (_e) { /* best-effort */ }
+        }
+        function disposeProbe() {
+          if (!probeEl) return;
+          var el = probeEl;
+          probeEl = null;
+          try { if (el.swiper && !el.swiper.destroyed) el.swiper.destroy(true, false); } catch (_e) { /* best-effort */ }
+          try { if (el.parentNode) el.parentNode.removeChild(el); } catch (_e) { /* best-effort */ }
+        }
+        function captureCtorFromProbe() {
+          if (!probeEl) return;
+          if (probeEl.swiper) {
+            captureFromInstance(probeEl.swiper);
+          }
+          if (SwiperCtor) {
+            disposeProbe();
+          }
+        }
+        function trackInstance(instance) {
+          instance.__teleportPatched = true;
+          trackedInstances.push(instance);
+          return instance;
+        }
+        function reapDetachedInstances() {
+          // React unmounts a slider that lives inside a conditionally rendered
+          // subtree — the product gallery lightbox — every time it closes. That
+          // leaves our instance bound to a detached element with its window
+          // resize handler and ResizeObserver still live, and every reopen adds
+          // another one. Only DETACHED elements are reaped: destroy() nulls the
+          // element's swiper reference, which would sabotage a live element whose
+          // instance had since been replaced by someone else.
+          if (trackedInstances.length === 0) return;
+          var kept = [];
+          for (var i = 0; i < trackedInstances.length; i++) {
+            var instance = trackedInstances[i];
+            var el = instance && instance.el;
+            if (!el) continue;
+            if (document.contains(el)) {
+              kept.push(instance);
+              continue;
+            }
+            try { if (!instance.destroyed) instance.destroy(true, false); } catch (_e) { /* best-effort */ }
+          }
+          trackedInstances = kept;
+        }
+        function collectSliders() {
+          var all = document.querySelectorAll('[data-thq="slider"]');
+          var sliders = [];
+          for (var i = 0; i < all.length; i++) {
+            if (all[i].hasAttribute(PROBE_ATTR)) continue;
+            sliders.push(all[i]);
+          }
+          return sliders;
+        }
+        function rebuildPaginationDom(instance) {
+          // Pagination bullets can be re-appended after our construction by
+          // the CDN bundle's scheduled post-init render or by React
+          // reconciliation during SPA back-nav. We re-query the pagination
+          // container from the live instance (rather than a captured
+          // reference) because React may have replaced the container DOM
+          // node during a re-mount.
+          try {
+            if (instance.destroyed) return;
+            var pagEl = instance.pagination && instance.pagination.el;
+            if (pagEl) pagEl.innerHTML = '';
+            if (instance.pagination && typeof instance.pagination.render === 'function') {
+              instance.pagination.render();
+            }
+            if (instance.pagination && typeof instance.pagination.update === 'function') {
+              instance.pagination.update();
+            }
+          } catch (_e) { /* best-effort */ }
+        }
+        function replaceWithFreshInstance(el) {
+          // Destroy the CDN-constructed Swiper and rebuild it with the
+          // proper config up front. Patching in place (setBreakpoint +
+          // update) leaves pagination stuck at the original bullet count
+          // (5 for 5 slides at the default slidesPerView=1), Swiper's
+          // external pagination.render() APPENDS instead of rebuilding,
+          // and there is no other public API to force a clean rebuild of
+          // the pagination subsystem. A fresh construction with the right
+          // breakpoints, pagination el, and navigation els gives us the
+          // correct page count (ceil(slides / slidesPerView)) and the
+          // first bullet correctly marked active.
+          try {
+            var pagEl = el.querySelector('.swiper-pagination');
+            try { el.swiper.destroy(true, true); } catch (_destroyErr) { /* best-effort */ }
+            // Clear any pagination bullets Swiper's destroy left behind so
+            // our new render() does not append to them.
+            if (pagEl) pagEl.innerHTML = '';
+            if (!SwiperCtor) return false;
+            var instance = trackInstance(new SwiperCtor(el, buildConfig(el)));
+            // The CDN bundle schedules a delayed pagination render that
+            // fires even after our destroy-and-recreate, re-appending
+            // bullets into the container. React can also restore stale
+            // bullet nodes from the prior page visit during SPA back-nav
+            // reconciliation. Rebuild at several timings so any late
+            // injection is mopped up.
+            setTimeout(function () { rebuildPaginationDom(instance); }, 100);
+            setTimeout(function () { rebuildPaginationDom(instance); }, 400);
+            setTimeout(function () { rebuildPaginationDom(instance); }, 1000);
+            return true;
+          } catch (_err) {
+            return false;
+          }
+        }
+        var isWorking = false;
+        function ensureSwiper(el) {
+          if (!el) return false;
+          if (el.swiper && el.swiper.__teleportPatched) return true;
+          // Guard against reentry: constructing or modifying a Swiper mutates
+          // the DOM, which re-fires the outer MutationObserver synchronously
+          // and would otherwise loop back into this function against a
+          // half-initialised instance.
+          if (isWorking) return false;
+          isWorking = true;
+          try {
+            if (el.swiper) {
+              // Don't touch a Swiper that the CDN bundle is still constructing
+              // — interfering before it finishes corrupts the layout. The
+              // destroyed check covers the window between destroy and the
+              // next mount.
+              if (el.swiper.destroyed) return false;
+              captureFromInstance(el.swiper);
+              // Rebuild the instance from scratch with the correct config:
+              // the CDN's default config ignores our breakpoints and the
+              // pagination bullet count is locked to the original slide
+              // count. A destroy + re-create is the only way to get the
+              // right page-count pagination plus a correctly marked first
+              // active bullet.
+              return replaceWithFreshInstance(el);
+            }
+            // No .swiper attached — either the CDN bundle hasn't fired yet
+            // (poll will retry), or the element was freshly re-mounted by
+            // Next.js SPA back/forward nav, or a modal just revealed a slider
+            // the bundle never saw. The bundle only inits on the initial
+            // DOMContentLoaded (plus a URL change), so it won't re-init any of
+            // those. Construct our own instance with the captured ctor + modules.
+            if (!SwiperCtor) return false;
+            try {
+              // Clear any stale pagination/navigation DOM that survived the
+              // re-mount so the fresh Swiper's render() doesn't append to
+              // leftover bullets/arrows from the previous page visit.
+              var stalePagination = el.querySelector('.swiper-pagination');
+              if (stalePagination) stalePagination.innerHTML = '';
+              trackInstance(new SwiperCtor(el, buildConfig(el)));
+              return true;
+            } catch (_err) {
+              return false;
+            }
+          } finally {
+            isWorking = false;
+          }
+        }
+        function normalisePaginationCount() {
+          // Defensive cleanup: any time the bootstrapper's trigger fires
+          // (initial load, pageshow, or DOM mutation), reconcile the
+          // pagination DOM with the Swiper instance's own bullet tracking.
+          // The CDN bundle and React's SPA reconciliation can leak extra
+          // bullet elements into the container; this keeps the visible
+          // bullet count aligned with the post-breakpoint page count.
+          var all = collectSliders();
+          for (var i = 0; i < all.length; i++) {
+            var el = all[i];
+            if (!el.swiper || !el.swiper.__teleportPatched) continue;
+            if (el.swiper.destroyed) continue;
+            var pagEl = el.swiper.pagination && el.swiper.pagination.el;
+            if (!pagEl) continue;
+            var domCount = pagEl.querySelectorAll('.swiper-pagination-bullet').length;
+            var tracked =
+              el.swiper.pagination && el.swiper.pagination.bullets
+                ? el.swiper.pagination.bullets.length
+                : 0;
+            if (domCount !== tracked && tracked > 0) {
+              rebuildPaginationDom(el.swiper);
+            }
+          }
+        }
+        function ensureAll() {
+          captureCtorFromProbe();
+          reapDetachedInstances();
+          var all = collectSliders();
+          var allDone = all.length > 0;
+          for (var i = 0; i < all.length; i++) {
+            if (!ensureSwiper(all[i])) allDone = false;
+          }
+          normalisePaginationCount();
+          return allDone;
+        }
+        var pollTimer = null;
+        function startPolling() {
+          if (pollTimer) return;
+          var tries = 0;
+          pollTimer = setInterval(function () {
+            tries += 1;
+            if (ensureAll() || tries >= 80) {
+              clearInterval(pollTimer);
+              pollTimer = null;
+            }
+          }, 100);
+        }
+        function trigger() {
+          if (!ensureAll()) startPolling();
+        }
+        // Delay the first trigger until after the CDN bundle has finished
+        // its own init pass. Running too early lets the MutationObserver
+        // fire while the CDN's Swiper is half-constructed and our patch
+        // interferes with layout.
+        function scheduleInitialTrigger() {
+          setTimeout(trigger, 200);
+        }
+        createCtorProbe();
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', scheduleInitialTrigger);
+        } else {
+          scheduleInitialTrigger();
+        }
+        window.addEventListener('pageshow', trigger);
+        // Observe the whole document so Next.js SPA back-nav (which re-mounts
+        // the slider element without an attached .swiper instance) triggers
+        // re-instantiation via the captured ctor. Don't invoke the patch
+        // synchronously on each mutation — the CDN bundle's own Swiper
+        // construction fires many mutations and we'd otherwise patch a
+        // half-initialised instance. Debounce through a macrotask so the
+        // current sync mutation chain finishes first.
+        var mutationPending = false;
+        try {
+          var observer = new MutationObserver(function () {
+            if (mutationPending) return;
+            mutationPending = true;
+            setTimeout(function () { mutationPending = false; trigger(); }, 150);
+          });
+          observer.observe(document.documentElement, { childList: true, subtree: true });
+        } catch (_e) { /* MutationObserver unsupported — polling still covers initial load */ }
+      })();
+    </script>
+  </body>
+</html>

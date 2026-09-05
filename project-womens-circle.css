@@ -1,0 +1,32 @@
+/* Begin banner styles */ 
+.project-womens-circle-impactfultext-container {
+  gap: 10px;
+  height: auto;
+  display: flex;
+  z-index: 1;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  padding-top: 80px;
+  padding-left: 128px 24px;
+  padding-right: 128px 24px;
+  padding-bottom: 80px;
+  background-size: cover;
+  justify-content: center;
+  background-image: url("public/external/bannerWomensCircle.png");
+}
+ 
+.project-womens-circle-impactful-text {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 64px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* End banner styles */
+
