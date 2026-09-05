@@ -1,0 +1,148 @@
+
+
+.home-personal-bio-container {
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 56px 24px;
+  z-index: 1;
+  align-self: center;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.home-landingpagehero-container {
+  gap: 24px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.home-landingpagehero-title-text {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  font-size: 64px;
+  align-self: stretch;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 110%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.home-landingpagehere-bio-text {
+  color: rgba(0, 0, 0, 0.550000011920929);
+  height: auto;
+  font-size: 24px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 145%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.home-project-card-container {
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 56px 24px;
+  z-index: 3;
+  overflow: hidden;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.home-project-card-container-alternate {
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 56px 24px;
+  z-index: 3;
+  overflow: hidden;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.home-project-card-image-container {
+  gap: 32px;
+  width: 50%;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.home-projectcard-image {
+  width: auto;
+  height: 350px;
+  flex-grow: 1;
+  object-fit: scale-down;
+}
+ 
+.home-projectcard-text-container {
+  gap: 16px;
+  width: 423px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.home-projectcard-title {
+  color: rgba(0, 0, 0, 1);
+  width: 100%;
+  height: auto;
+  font-size: 25px;
+  align-self: stretch;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 38px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.home-projectcard-description {
+  color: rgba(0, 0, 0, 1);
+  width: 100%;
+  height: auto;
+  font-size: 20px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 38px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+@media(max-width: 991px) {
+  .home-projectcard-image {
+    /*overflow: clip;*/
+    object-fit: scale-down;
+  }
+}
