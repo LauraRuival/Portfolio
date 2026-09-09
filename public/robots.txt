@@ -4,4 +4,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: https://laura-ruival-portfolio.teleporthq.app/sitemap.xml
+Sitemap: https://https://lauraruival.github.io/Portfolio/sitemap.xml
