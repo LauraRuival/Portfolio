@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://laura-ruival-portfolio.teleporthq.app/contact-me</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://lauraruival.github.io/Portfolio/contact-me</loc>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://laura-ruival-portfolio.teleporthq.app/project-circles-sage-and-sisters</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://lauraruival.github.io/Portfolio/project-circles-sage-and-sisters</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://laura-ruival-portfolio.teleporthq.app</loc>
-    <changefreq>daily</changefreq>
+    <loc>https://lauraruival.github.io/Portfolio</loc>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://laura-ruival-portfolio.teleporthq.app/projects-joy-of-art-exhibition</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://lauraruival.github.io/Portfolio/projects-joy-of-art-exhibition</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://laura-ruival-portfolio.teleporthq.app/project-womens-circle</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://lauraruival.github.io/Portfolio/project-womens-circle</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://laura-ruival-portfolio.teleporthq.app/project-murphys-law-design</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://lauraruival.github.io/Portfolio/project-murphys-law-design</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
