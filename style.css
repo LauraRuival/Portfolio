@@ -171,13 +171,13 @@ body {
   text-decoration: none;
 }
 
-.buttonsecondary {
+.backtotop-button-container {
   gap: 10px;
   right: var(--dl-layout-space-unit);
   display: flex;
   padding: 10px 16px;
   z-index: 16;
-  position: sticky;
+  /*position: sticky;*/
   align-self: flex-end;
   align-items: center;
   border-color: rgba(0, 0, 0, 1);
@@ -186,7 +186,21 @@ body {
   border-radius: 8px;
   justify-content: center;
   background-color: rgba(255, 253, 248, 1);
+  /* keeps button at bottom of page */
+  position: fixed;
+  bottom: 0;
+  /*left: calc(900px);*/
+  width: 160px;
 }
+
+/*
+.floating-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;  Optional: stretches it across the screen width 
+}
+*/
 
 .buttonsecondary-container {
   width: 120px;
