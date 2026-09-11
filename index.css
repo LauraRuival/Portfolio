@@ -38,8 +38,8 @@
   text-decoration: none;
 }
  
-.home-landingpagehere-bio-text {
-  color: rgba(0, 0, 0, 0.550000011920929);
+.home-landingpagehero-bio-text {
+  color: rgba(0, 0, 0, 0.55);
   height: auto;
   font-size: 24px;
   align-self: stretch;
@@ -126,7 +126,7 @@
 }
  
 .home-projectcard-description {
-  color: rgba(0, 0, 0, 1);
+  color: #5A5A5A;
   width: 100%;
   height: auto;
   font-size: 20px;
