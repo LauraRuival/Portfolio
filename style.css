@@ -71,6 +71,7 @@ body {
 
 .main-wrapper {
   width: 990px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   min-height: 100vh;
@@ -576,9 +577,13 @@ body {
   }
   .sectionheading-text {
     font-size: 24px;
+  }
+  .skillslist-text {
+    font-size: 24px;
+  }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 601px) and (max-width: 991px) {
     .main-wrapper {
       width: 100%;
     }
@@ -593,9 +598,6 @@ body {
 }
 
 @media (min-width: 768px) {
-    .main-wrapper {
-        width: 100%;
-    }
   .navigation-title-text {
       display: contents;
       width: 100%;
@@ -619,7 +621,7 @@ body {
 
 @media (min-width: 992px) {
     .main-wrapper {
-        width: 100%;
+    width: 990px;
     }
 }
 
