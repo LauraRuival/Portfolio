@@ -81,6 +81,7 @@ body {
 /* Begin top navigation styles */
 .navigation-container {
   gap: 10px;
+  width: 100%;
   height: 80px;
   display: flex;
   padding: 24px 24px;
@@ -125,6 +126,8 @@ body {
   gap: 40px;
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: flex-end;
 }
  
 .navigation-links-container {
@@ -159,6 +162,19 @@ body {
 }
  
 .buttonprimary-text {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 18px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.letsworktogether-button-text {
   color: rgba(255, 255, 255, 1);
   height: auto;
   font-size: 18px;
@@ -545,6 +561,67 @@ body {
   height: 25px;
 }
 /* End footer styles */
+
+/* Responsive design styles */
+@media (max-width: 600px) {
+  .main-wrapper {
+    width: 100%;
+  }
+  .navigation-title-text {
+    display: none;
+  }
+  .navigation-container {
+    padding: 10px;
+    width: 100%;
+  }
+  .sectionheading-text {
+    font-size: 24px;
+}
+
+@media (min-width: 601px) {
+    .main-wrapper {
+      width: 100%;
+    }
+    .navigation-title-text {
+      display: none;
+      width: 100%;
+    }
+    .navigation-container {
+      padding: 10px;
+      width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-wrapper {
+        width: 100%;
+    }
+  .navigation-title-text {
+      display: contents;
+      width: 100%;
+    }
+}
+
+/* Mobile First: Hide desktop text by default */
+.responsive-link .desktop-text {
+  display: none;
+}
+
+/* Desktop View: Swap the visible text at 768px wide */
+@media (min-width: 768px) {
+  .responsive-link .mobile-text {
+    display: none;
+  }
+  .responsive-link .desktop-text {
+    display: inline;
+  }
+}
+
+@media (min-width: 992px) {
+    .main-wrapper {
+        width: 100%;
+    }
+}
 
 
 

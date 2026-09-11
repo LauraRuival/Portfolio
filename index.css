@@ -94,8 +94,8 @@
 }
  
 .home-projectcard-image {
-  width: auto;
-  height: 350px;
+  width: 100%;
+  height: auto;
   flex-grow: 1;
   object-fit: scale-down;
 }
@@ -140,6 +140,16 @@
   text-decoration: none;
 }
  
+/* Responsive design style rules */
+@media(max-width: 600px){
+  .home-landingpagehero-title-text {
+    font-size: 32px;
+  }
+  .home-landingpagehero-bio-text {
+    font-size: 18px;
+  }
+}
+
 @media(max-width: 991px) {
   .home-projectcard-image {
     /*overflow: clip;*/
