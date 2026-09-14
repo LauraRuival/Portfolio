@@ -388,7 +388,7 @@ body {
   height: auto;
 }
 
-.project-feature-image-small {
+.project-feature-image-narrow {
   width: 200px;
   max-width: 100%;
   height: auto;
@@ -565,21 +565,57 @@ body {
   }
   .sectionheading-text {
     font-size: 24px;
+    padding-top: 20px;
   }
-  .skillslist-text {
-    font-size: 24px;
+  .project-description-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .project-feature-container {
+    padding-top: 20px;
+  }
+  .project-feature-container-alternate {
+    padding-top: 20px;
+  }
+  .project-feature-text {
+    font-size: 18px;
+  }
+  .project-quote-container {
+    padding-top: 20px;
+  }
+  .project-quote-text {
+    font-size: 18px;
+  }
+  .project-feature-image-container {
+    padding-top: 20px;
+  }
+  .project-feature-image-container-alternate {
+    padding-top: 20px;
   }
   .project-feature-image-wide {
     width: 400px;
     height: auto;
   }
   .project-feature-image-medium {
-    width: 200px;
+    width: 300px;
     height: auto;
   }
-  .project-feature-image-small {
+  .project-feature-image-narrow {
     width: 100px;
     height: auto;
+  }
+  .sectionheading-container {
+    padding-top: 20px;
+  }
+  .skillslist-container {
+    padding-top: 20px;
+  }
+  .sectionheading-skillslist-text {
+    font-size: 24px;
+    padding-top: 20px;
+  }
+  .skillslist-text {
+    font-size: 16px;
   }
   .footer-content {
     gap: 16px;

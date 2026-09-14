@@ -1,5 +1,5 @@
 /* Begin banner styles */
-.project-circles-sage-and-sisters-impactfultext-container {
+.project-page-heading-container {
   gap: 10px;
   height: 250px;
   display: flex;
@@ -17,7 +17,7 @@
   background-image: url("public/external/bannerCirclesSageAndSisters.png");
 }
 
-.project-circles-sage-and-sisters-impactful-text {
+.project-page-heading-text {
     color: rgba(255, 255, 255, 1); /* change text color to black or white depending on color of background image */
     height: auto;
     font-size: 76px;
@@ -34,7 +34,7 @@
 
 /* Responsive design styles */
 @media (max-width: 600px) {
- .project-circles-sage-and-sisters-impactfultext-container  {
+ .project-page-heading-container  {
     height: 125px;
     padding-top: 20px;
     padding-left: 24px;
@@ -42,7 +42,7 @@
     padding-bottom: 24px;
   }
  
-  .project-circles-sage-and-sisters-impactful-text {
+  .project-page-heading-text {
     height: 125;
     font-size: 36px;
   }
