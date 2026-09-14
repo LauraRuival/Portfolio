@@ -615,7 +615,14 @@ body {
     padding-top: 20px;
   }
   .skillslist-text {
-    font-size: 16px;
+    font-size: 18px;
+  }
+  .skillslist-image {
+    top: 5px;
+    left: 1px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
   }
   .footer-content {
     gap: 16px;
