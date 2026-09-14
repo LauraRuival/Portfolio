@@ -48,7 +48,7 @@ body {
   font-family: Inter;
   font-weight: 400px;
   font-stretch: normal;
-  letter-spacing: 0em;
+  letter-spacing: 0;
 }
  
 .SingleLineBodyBase {
@@ -57,7 +57,7 @@ body {
   font-family: Inter;
   font-weight: 400px;
   font-stretch: normal;
-  letter-spacing: 0em;
+  letter-spacing: 0;
 }
  
 .Content {
@@ -194,7 +194,6 @@ body {
   display: flex;
   padding: 10px 16px;
   z-index: 16;
-  /*position: sticky;*/
   align-self: flex-end;
   align-items: center;
   border-color: rgba(0, 0, 0, 1);
@@ -203,10 +202,8 @@ body {
   border-radius: 8px;
   justify-content: center;
   background-color: rgba(255, 253, 248, 1);
-  /* keeps button at bottom of page */
-  position: fixed;
+  position: fixed;  /* keeps button at bottom of page */
   bottom: 0;
-  /*left: calc(900px);*/
   width: 160px;
 }
 
@@ -381,16 +378,19 @@ body {
  
 .project-feature-image-wide {
   width: 800px;
+  max-width: 100%;
   height: auto;
 }
 
 .project-feature-image-medium {
   width: 400px;
+  max-width: 100%;
   height: auto;
 }
 
-.project-feature-image-small {
+.project-feature-image-narrow {
   width: 200px;
+  max-width: 100%;
   height: auto;
 }
 /* End project feature styles */
@@ -468,7 +468,6 @@ body {
   position: relative;
   align-items: flex-start;
   align-content: center;
-  /*vertical-align: middle; This didn't work */
   flex-shrink: 0;
 }
  
@@ -479,25 +478,9 @@ body {
   height: 28px;
   position: absolute;
 }
-/* End Skills List styles
+/* End Skills List styles */
 
 /* Begin footer styles */
-.Footer-elm {
-  gap: 10px;
-  width: 100%;
-  height: auto;
-  display: flex;
-  padding: 0 24px;
-  z-index: 9;
-  overflow: hidden;
-  align-self: stretch;
-  align-items: center;
-  flex-shrink: 0;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 1);
-}
-
 .footer-container {
   gap: 10px;
   width: 100%;
@@ -515,7 +498,8 @@ body {
 }
 
 .footer-content {
-  gap: 600px;
+  gap: 16px;
+  width: 100%;
   height: 80px;
   display: flex;
   align-self: stretch;
@@ -563,7 +547,8 @@ body {
 }
 /* End footer styles */
 
-/* Responsive design styles */
+/* Begin responsive design styles */
+/* Mobile styles */
 @media (max-width: 600px) {
   .main-wrapper {
     width: 100%;
@@ -575,14 +560,87 @@ body {
     padding: 10px;
     width: 100%;
   }
+  .responsive-link .desktop-text { 
+    display: none; /* Hide desktop text */
+  }
   .sectionheading-text {
     font-size: 24px;
+    padding-top: 20px;
+  }
+  .project-description-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .project-feature-container {
+    padding-top: 20px;
+  }
+  .project-feature-container-alternate {
+    padding-top: 20px;
+  }
+  .project-feature-text {
+    font-size: 18px;
+  }
+  .project-quote-container {
+    padding-top: 20px;
+  }
+  .project-quote-text {
+    font-size: 18px;
+  }
+  .project-feature-image-container {
+    padding-top: 20px;
+  }
+  .project-feature-image-container-alternate {
+    padding-top: 20px;
+  }
+  .project-feature-image-wide {
+    width: 400px;
+    height: auto;
+  }
+  .project-feature-image-medium {
+    width: 300px;
+    height: auto;
+  }
+  .project-feature-image-narrow {
+    width: 100px;
+    height: auto;
+  }
+  .sectionheading-container {
+    padding-top: 20px;
+  }
+  .skillslist-container {
+    padding-top: 20px;
+  }
+  .sectionheading-skillslist-text {
+    font-size: 24px;
+    padding-top: 20px;
   }
   .skillslist-text {
-    font-size: 24px;
+    font-size: 16px;
+  }
+  .footer-content {
+    gap: 16px;
+    height: 60px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .footer-text {
+    width: auto;
+    white-space: nowrap;
+    font-size: 16px;
+  }
+  .sociallinks-container1 {
+    gap: 10px;
+    width: auto;
+  }
+  
+  .backtotop-button-container {
+    bottom: 0;
+    left: 50%;                    /* Move to the middle horizontally */
+    transform: translateX(-50%);  /* Pull back by half its width to truly center */
   }
 }
 
+/* Tablet */
 @media (min-width: 601px) and (max-width: 991px) {
     .main-wrapper {
       width: 100%;
@@ -597,32 +655,31 @@ body {
     }
 }
 
+/* Tablet View */
 @media (min-width: 768px) {
   .navigation-title-text {
       display: contents;
       width: 100%;
     }
-}
-
-/* Mobile First: Hide desktop text by default */
-.responsive-link .desktop-text {
-  display: none;
-}
-
-/* Desktop View: Swap the visible text at 768px wide */
-@media (min-width: 768px) {
-  .responsive-link .mobile-text {
-    display: none;
+  .responsive-link .mobile-text { 
+    display: none; /* Hide the mobile text at 768px wide */
   }
   .responsive-link .desktop-text {
     display: inline;
   }
 }
 
+/* Desktop View */
 @media (min-width: 992px) {
-    .main-wrapper {
+  .main-wrapper {
     width: 990px;
     }
+    .responsive-link .mobile-text { 
+    display: none; /* Hide the mobile text at 768px wide */
+  }
+  .responsive-link .desktop-text {
+    display: inline;
+  }
 }
 
 
