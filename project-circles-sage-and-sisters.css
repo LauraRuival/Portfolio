@@ -8,17 +8,17 @@
   align-self: stretch;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex: auto;
   padding-top: 80px;
-  padding-left: 128px 24px;
-  padding-right: 128px 24px;
+  padding-left: 24px;
+  padding-right: 24px;
   padding-bottom: 80px;
   background-size: cover;
   background-image: url("public/external/bannerCirclesSageAndSisters.png");
 }
 
 .project-circles-sage-and-sisters-impactful-text {
-    color: rgba(255, 255, 255, 1); /*change text color to black or white depending on color of background image*/
+    color: rgba(255, 255, 255, 1); /* change text color to black or white depending on color of background image */
     height: auto;
     font-size: 76px;
     font-style: Bold;
@@ -29,7 +29,24 @@
     font-stretch: normal;
     text-decoration: none;
 }
+
 /* End banner styles */
+
+/* Responsive design styles */
+@media (max-width: 600px) {
+ .project-circles-sage-and-sisters-impactfultext-container  {
+    height: 125px;
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-right: 20px;
+    padding-bottom: 24px;
+  }
+ 
+  .project-circles-sage-and-sisters-impactful-text {
+    height: 125;
+    font-size: 36px;
+  }
+}
 
 
  
