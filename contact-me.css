@@ -1,5 +1,5 @@
 /* Begin banner styles */
-.contact-me-impactfultext-container {
+.page-heading-container {
   gap: 10px;
   display: flex;
   padding: 80px 24px;
@@ -11,7 +11,7 @@
   background-image: url("public/external/bannerContactMe.png");
 }
  
-.contact-me-impactfultext {
+.page-heading-text {
   color: rgba(255, 255, 255, 1);
   height: auto;
   font-size: 76px;
@@ -138,5 +138,42 @@
 
 .status-message-container {
   padding-bottom: 24px;
+}
+
+/* Responsive design styles */
+@media (max-width: 600px) {
+ .page-heading-container  {
+    height: 125px;
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-right: 20px;
+    padding-bottom: 24px;
+  }
+ 
+  .page-heading-text {
+    height: 125;
+    font-size: 36px;
+  }
+
+  .contact-me-contact-form-container {
+    gap: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .responsive-form {
+    gap: 8px;
+    width: 320px;
+    max-width: 100%;
+  }
+
+  .contact-me-contact-form-row-container {
+    gap: 8px;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .status-message-container {
+    padding-bottom: 18px;
+  }
 }
 
