@@ -144,7 +144,7 @@
 }
  
 /* Responsive design style rules */
-@media(max-width: 768px){
+@media(max-width: 767px){
   .home-landingpagehero-title-text {
     font-size: 32px;
   }

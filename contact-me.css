@@ -142,7 +142,7 @@
 }
 
 /* Responsive design styles */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .contact-me-contact-form-container {
     width: calc(100% - 40px);
   }
