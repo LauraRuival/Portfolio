@@ -4,7 +4,6 @@
   --dl-layout-space-unit: 16px;
   --dl-layout-size-medium: 96px;
   --dl-layout-size-xlarge: 192px;
-  --dl-layout-size-xsmall: 16px;
   --dl-color-theme-accent1: #FFFFFF;
   --dl-color-theme-accent2: #F5D1B0;
   --dl-layout-radius-round: 50%;
@@ -31,11 +30,15 @@
   --dl-layout-radius-buttonradius: 24px;
   --dl-layout-space-oneandhalfunits: 24px;
 }
+
+:root {
+  --menu-content: 3;
+}
  
-.teleport-show {
+/* .teleport-show {
   display: flex !important;
   transform: none !important;
-}
+} */
 
 body {
   display: flex;
@@ -80,6 +83,146 @@ body {
 }
 
 /* Begin top navigation styles */
+/* BEGIN RESPONSIVE MENU STYLES */
+.header-main {
+  width: 990px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.header-main nav {
+  display: flex;
+  width: 100%;
+}
+
+.header-main .logo {
+  height: 45px;
+  width: fit-content;
+  align-self: center;
+  cursor: pointer;
+}
+
+.header-main .logo img {
+  height: 100%;
+}
+
+.header-main .responsive-link {
+  flex: 1; /* Allow the links to take up available space */
+}
+
+.header-main ul {
+  height: 100%;
+  padding-left: 40px;
+  list-style: none;
+  display: flex;
+  align-self: center;
+}
+
+.header-main ul li {
+  position: relative;
+}
+
+.header-main ul li > a,
+.header-main ul li > button {
+  display: block;
+  padding: 0 10px;
+  height: 100%;
+  line-height: 60px;
+  font-size: 1rem;
+  font-family: Inter;
+  color: #000000;
+  background-color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all ease-in-out 100ms;
+  border: 0;
+  text-align: left;
+}
+
+.header-main ul li > a:hover,
+.header-main ul li > button:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+/* DROPDOWN STYLING START */
+.header-main ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -40px;
+  transition: all ease-in-out 100ms;
+}
+
+.header-main ul li ul li a {
+  white-space: nowrap;
+  /* color: #000000;
+  background-color: #fff; */
+}
+
+.header-main ul li ul li {
+  border-top: 1px solid #aeaeae;
+  border-left: 1px solid #aeaeae;
+  border-right: 1px solid #aeaeae;
+}
+
+.header-main ul li ul li:last-child a {
+  border-bottom: 1px solid #aeaeae;
+}
+
+@media (min-width: 768px) {
+  ul li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+}
+
+.header-main ul li > button[aria-expanded="true"] + ul {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+/* DROPDOWN STYLING END */
+
+ /* BEGIN SOCIAL MEDIA LINK STYLES */
+ .header-main .sm {
+  align-self: center;
+  display: flex;
+}
+
+.header-main .sm-links {
+  height: 60px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.header-main .sm-links a {
+  display: block;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  align-self: center;
+  /* text-decoration: none; */
+}
+
+.header-main .sm-links img {
+  height: 100%;
+}
+/* END SOCIAL MEDIA LINK STYLES */
+/* END RESPONSIVE MENU STYLES */
+
 .navigation-container {
   gap: 10px;
   width: 100%;
@@ -121,6 +264,21 @@ body {
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
+}
+
+.mobile-menu-content {
+  display: none;
+  position: absolute;
+  top: 60px; /* Adjust based on your header height */
+  right: 0;
+  width: 200px; /* Adjust as needed */
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.mobile-menu-content.show {
+  display: block;
 }
  
 .navigation-extracontent-container {
@@ -548,75 +706,218 @@ body {
 /* End footer styles */
 
 /* Begin responsive design styles */
-/* Mobile styles */
-@media (max-width: 600px) {
+/* Mobile 767px and below */
+@media (max-width: 767px) {
   .main-wrapper {
     width: 100%;
   }
+
   .navigation-title-text {
     display: none;
   }
+
   .navigation-container {
     padding: 10px;
     width: 100%;
   }
+
   .responsive-link .desktop-text { 
     display: none; /* Hide desktop text */
   }
+
+  /* .responsive-link .mobile-text {
+    display: inline; /* Show mobile text 
+    width: 100%;
+  }
+  */
+
+  .header-main {
+    width: 100%;
+  }
+
+  .mobile-menu-content {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 5px;
+    right: 20px;
+    z-index: 200;
+    background-color: #ffffff;
+  }
+
+  .header-main ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+  }
+
+  .header-main nav > ul {
+    flex-wrap: nowrap; /* Add this to make sure all of the menu items are displayed in a row */
+  }
+
+  .header-main ul li {
+    width: 100%;
+    height: calc(100% / var(--menu-content)); /* Evenly divides up the available space by the number of menu items */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    transition: all ease-in-out 100ms;
+  }
+
+  .header-main nav > ul > li:last-child { /* I changed this from :nth last-child(1) because it wasn't working for me */
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .header-main ul li > a,
+  .header-main ul li > button {
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .header-main ul li > a:hover,
+  .header-main ul li > button:hover {
+    /*background-color: transparent;*/
+    color: #ffffff;
+  }
+
+  .header-main nav {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .header-main ul li ul {
+    display: none;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    position: static;
+    width: 100%;
+    z-index: 2000;
+  }
+
+  .header-main ul li > button[aria-expanded="true"] + ul {
+    display: flex;
+  }
+
+  .header-main ul li ul li {
+    height: fit-content;
+    display: block;
+    background-color: #111111
+  }
+
+  .header-main ul li ul li a {
+    background-color: #111111;
+    color: #ffffff;
+    line-height: 1.25;
+    padding: 8px 12px;
+    white-space: normal;
+  }
+
+  .header-main ul li ul li a:hover {
+    background-color: #111111;
+    color: #ffffff;
+  }
+
+  .header-main .sm-links a {
+    display: none; /* Hide social media links */
+  }
+
   .sectionheading-text {
     font-size: 24px;
     padding-top: 20px;
   }
+
   .project-description-text {
     font-size: 18px;
     line-height: 24px;
   }
+
   .project-feature-container {
     padding-top: 20px;
   }
+
   .project-feature-container-alternate {
     padding-top: 20px;
   }
+
   .project-feature-text {
     font-size: 18px;
   }
+
   .project-quote-container {
     padding-top: 20px;
   }
+
   .project-quote-text {
     font-size: 18px;
   }
+
   .project-feature-image-container {
     padding-top: 20px;
   }
+
   .project-feature-image-container-alternate {
     padding-top: 20px;
   }
+
   .project-feature-image-wide {
     width: 400px;
     height: auto;
   }
+
   .project-feature-image-medium {
     width: 300px;
     height: auto;
   }
+
   .project-feature-image-narrow {
     width: 100px;
     height: auto;
   }
+
   .sectionheading-container {
     padding-top: 20px;
   }
+
   .skillslist-container {
     padding-top: 20px;
   }
+
   .sectionheading-skillslist-text {
     font-size: 24px;
     padding-top: 20px;
   }
+
   .skillslist-text {
     font-size: 18px;
   }
+
   .skillslist-image {
     top: 5px;
     left: 1px;
@@ -624,17 +925,20 @@ body {
     height: 24px;
     position: absolute;
   }
+
   .footer-content {
     gap: 16px;
     height: 60px;
     width: 100%;
     justify-content: space-between;
   }
+
   .footer-text {
     width: auto;
     white-space: nowrap;
     font-size: 16px;
   }
+
   .sociallinks-container1 {
     gap: 10px;
     width: auto;
@@ -647,45 +951,49 @@ body {
   }
 }
 
-/* Tablet */
-@media (min-width: 601px) and (max-width: 991px) {
-    .main-wrapper {
+/* Tablet 768-1023 pixels */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-wrapper {
       width: 100%;
-    }
-    .navigation-title-text {
-      display: none;
-      width: 100%;
-    }
-    .navigation-container {
-      padding: 10px;
-      width: 100%;
-    }
-}
-
-/* Tablet View */
-@media (min-width: 768px) {
+  }
   .navigation-title-text {
-      display: contents;
-      width: 100%;
-    }
-  .responsive-link .mobile-text { 
+    display: none;
+    width: 100%;
+  }
+  .navigation-container {
+    padding: 10px;
+    width: 100%;
+  }
+  .navigation-title-text {
+    display: contents;
+    width: 100%;
+  }
+  .mobile-menu-btn {
+    display: none; /* Hide the mobile menu button */
+  }
+  .responsive-link .mobile-menu-text { 
     display: none; /* Hide the mobile text at 768px wide */
   }
   .responsive-link .desktop-text {
     display: inline;
+    width: 100%;
   }
 }
 
-/* Desktop View */
-@media (min-width: 992px) {
+/* Desktop 1024px and above */
+@media (min-width: 1024px) {
   .main-wrapper {
     width: 990px;
-    }
-    .responsive-link .mobile-text { 
-    display: none; /* Hide the mobile text at 768px wide */
+  }
+   .mobile-menu-btn {
+    display: none; /* Hide the mobile menu button */
+  }
+  .responsive-link .mobile-text { 
+    display: none; /* Hide the mobile text */
   }
   .responsive-link .desktop-text {
     display: inline;
+    width: 100%;
   }
 }
 

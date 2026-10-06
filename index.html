@@ -11,7 +11,21 @@
     <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+      html {  line-height: 1.15;}
+      body {  margin: 0;}
+      * {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}
+      p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}
+      button {  background-color: transparent;}
+      button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}
+      button,select {  text-transform: none;}
+      button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}
+      button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}
+      button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}
+      pre {  white-space: normal;}input {  padding: 2px 4px;}
+      img {  display: block;}
+      details {  display: block;  margin: 0;  padding: 0;}
+      summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}
+      html { scroll-behavior: smooth  }
     </style>
     <style data-tag="default-style-sheet">
       html {
@@ -57,13 +71,63 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./index.css" />
     <link rel="icon" href="./public/external/favicon.ico" type="image/x-icon" />
+    <script src="./script.js"></script>
   </head>
   <body>
-    
+
     <!--Begin main content -->
     <div class="main-wrapper">
 
       <!-- Begin top navigtaion-->
+      <header class="header-main">
+        <nav>
+          <a href="index.html" class="logo">
+              <img src="public/external/LR-Logo-v6.png" alt="LR logo" class="logo-image" />
+          </a>
+          <div class="mobile-menu-btn">
+            <img src="public/external/icon-burger-menu.png" alt="Menu icon" onclick="toggleMenu()"/>
+          </div> 
+          <div class="responsive-link">
+            <div class="mobile-text">
+              <div class="mobile-menu-content" id="mobileMenu">
+               <ul>
+                  <li><a href="index.html">Home</a></li>
+                    <li><button type="button" aria-expanded="false" aria-controls="mobileProjectsSubmenu" onclick="toggleSubmenu(this)">Projects</button>
+                      <ul id="mobileProjectsSubmenu">
+                          <li><a href="project-circles-sage-and-sisters.html">Circles, Sage and Sisters</a></li>
+                          <li><a href="project-murphys-law-design.html">Murphy's Law Design</a></li>
+                          <li><a href="project-womens-circle.html">Women's Circle Invitations</a></li>
+                          <li><a href="project-joy-of-art-exhibition.html">Joy of Art Exhibition</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="contact-me.html">Contact</a></li>
+              </ul>
+              </div>
+            </div>
+            <div class="desktop-text">
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                    <li><button type="button" aria-expanded="false" aria-controls="desktopProjectsSubmenu" onclick="toggleSubmenu(this)">Projects</button>
+                      <ul id="desktopProjectsSubmenu">
+                          <li><a href="project-circles-sage-and-sisters.html">Circles, Sage and Sisters</a></li>
+                          <li><a href="project-murphys-law-design.html">Murphy's Law Design</a></li>
+                          <li><a href="project-womens-circle.html">Women's Circle Invitations</a></li>
+                          <li><a href="project-joy-of-art-exhibition.html">Joy of Art Exhibition</a></li>
+                      </ul>
+                  </li>
+                  <!-- <li><a href="#">About Me</a></li> -->
+                  <li><a href="contact-me.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="sm">    
+          <div class="sm-links">
+              <a href="https://www.linkedin.com/in/laura-ruival-0a43b52/"><img src="public/external/LI-In-Bug.png" alt="LinkedIn logo" class="sociallink-image"></a>
+          </div>
+        </div>
+        </nav>
+      </header>
+      <!-- 
       <div class="navigation-container">
         <div class="navigation-content">
           <a href="index.html"><img
@@ -84,9 +148,10 @@
                 </a>
               </span>
             </div>
-          </div>
+          </div> 
         </div>
       </div>
+      -->
       <!-- End top navigtaion-->
 
       <!-- Begin personal bio section -->
@@ -235,11 +300,19 @@
               class="skillslist-image"
             />
           </div>
+           <span class="skillslist-text">GoDaddy Website Builder</span>
+          <div class="skillslist-image-container">
+            <img
+              alt="Diamod icon" 
+              src="public/external/icon-GoDaddy-Symbol-0.svg"
+              class="skillslist-image"
+            />
+          </div>
           <span class="skillslist-text">User Empathy</span>
           <div class="skillslist-image-container">
           <img
             alt="Squish icon"
-            src="public/external/icon-squish.svg"
+            src="public/external/icon-heart.svg"
             class="skillslist-image"
           />
           </div>  
@@ -303,7 +376,7 @@
         <div class="skillslist-image-container">
           <img
             alt="Figma logo icon" 
-            src="public/external/icon-Figma-full-color.svg"
+            src="public/external/icon-Figma-monoline-black.svg"
             class="skillslist-image"
           />
         </div>
