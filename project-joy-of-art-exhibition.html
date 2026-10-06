@@ -64,6 +64,7 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./project-joy-of-art-exhibition.css" />
     <link rel="icon" href="./public/external/favicon.ico" type="image/x-icon" />
+    <script src="./script.js"></script>
   </head>
   <body>
   
@@ -71,29 +72,53 @@
     <div class="main-wrapper">
           
       <!-- Begin top navigtaion-->
-      <div class="navigation-container">
-        <div class="navigation-content">
-          <a href="index.html"><img
-            src="public/external/LR-Logo-v6.png"
-            alt="LR logo"
-            class="navigation-logo-image"
-            /></a>
-          <span class="navigation-title-text">Laura Ruival</span>
-          <div class="navigation-extracontent-container">
-            <div class="navigation-links-container">
-              <span class="navigation-link-text"><a href="index.html#projects">Projects</a></span>
+      <header class="header-main">
+        <nav>
+          <a href="index.html" class="logo">
+              <img src="public/external/LR-Logo-v6.png" alt="LR logo" class="logo-image" />
+          </a>
+          <div class="mobile-menu-btn">
+            <img src="public/external/icon-burger-menu.png" alt="Menu icon" onclick="toggleMenu()"/>
+          </div> 
+          <div class="responsive-link">
+            <div class="mobile-text">
+              <div class="mobile-menu-content" id="mobileMenu">
+               <ul>
+                  <li><a href="index.html">Home</a></li>
+                    <li><button type="button" aria-expanded="false" aria-controls="mobileProjectsSubmenu" onclick="toggleSubmenu(this)">Projects</button>
+                      <ul id="mobileProjectsSubmenu">
+                          <li><a href="project-circles-sage-and-sisters.html">Circles, Sage and Sisters</a></li>
+                          <li><a href="project-murphys-law-design.html">Murphy's Law Design</a></li>
+                          <li><a href="project-womens-circle.html">Women's Circle Invitations</a></li>
+                          <li><a href="project-joy-of-art-exhibition.html">Joy of Art Exhibition</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="contact-me.html">Contact</a></li>
+              </ul>
+              </div>
             </div>
-            <div class="buttonprimary">
-              <span class="buttonprimary-text">
-                <a href="contact-me.html" class="responsive-link">
-                  <span class="mobile-text">Contact Me</span>
-                  <span class="desktop-text">Let’s work together</span>
-                </a>
-              </span>
+            <div class="desktop-text">
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                    <li><button type="button" aria-expanded="false" aria-controls="desktopProjectsSubmenu" onclick="toggleSubmenu(this)">Projects</button>
+                      <ul id="desktopProjectsSubmenu">
+                          <li><a href="project-circles-sage-and-sisters.html">Circles, Sage and Sisters</a></li>
+                          <li><a href="project-murphys-law-design.html">Murphy's Law Design</a></li>
+                          <li><a href="project-womens-circle.html">Women's Circle Invitations</a></li>
+                          <li><a href="project-joy-of-art-exhibition.html">Joy of Art Exhibition</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="contact-me.html">Contact</a></li>
+              </ul>
             </div>
           </div>
+          <div class="sm">    
+          <div class="sm-links">
+              <a href="https://www.linkedin.com/in/laura-ruival-0a43b52/"><img src="public/external/LI-In-Bug.png" alt="LinkedIn logo" class="sociallink-image"></a>
+          </div>
         </div>
-      </div>
+        </nav>
+      </header>
       <!-- End top navigtaion--> 
       
       <!-- Begin banner section -->
